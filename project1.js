@@ -1,8 +1,8 @@
 async function handlePromise() {
   try {
-    const API_URL = "https://api.dictionaryapi.dev/api/v2/entries/en/hello";
+    const DICTIONARY_API = "https://api.dictionaryapi.dev/api/v2/entries/en/hello";
 
-    const data = await fetch(API_URL);
+    const data = await fetch(DICTIONARY_API);
 
     const jsonData = data.json();
 
