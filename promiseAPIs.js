@@ -1,10 +1,13 @@
-// Promise.all() - when all cases are success
+// 1. Promise.all() 
+// a. When all cases are success - after 3s returns all promise
 const p1 = new Promise((resolve, reject) => {
   setTimeout(() => resolve("P1 Success"), 3000);
 });
 
 const p2 = new Promise((resolve, reject) => {
-  setTimeout(() => resolve("P2 Success"), 1000);
+  // setTimeout(() => resolve("P2 Success"), 1000);
+  // b. Wehn promise fails - as soon as faced error in 1s, immediately returns the error
+  setTimeout(() => reject("P2 Reject"), 1000);
 });
 
 const p3 = new Promise((resolve, reject) => {
